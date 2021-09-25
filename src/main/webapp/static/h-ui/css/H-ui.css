@@ -1001,7 +1001,10 @@ blockquote.text-r p,blockquote.text-r small{text-align:right}
 blockquote.text-r small:before{content:''}
 blockquote.text-r small:after{content:'\00A0 \2014'}
 q:before,q:after,blockquote:before,blockquote:after{content:""}
-q {/*短的引用*/quotes: "\201C" "\201D" "\2018" "\2019"}
+
+q { /*短的引用*/
+    quotes: "\201C" "\201D" "\2021" "\2019"
+}
 /*3.1.20 上标，下标
 	Example:		<sup>2</sup>	<sub>2<sub>
 	Explain:		上标|下标

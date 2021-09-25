@@ -1,8 +1,8 @@
 <jsp:useBean id="product" scope="request" type="javax.xml.stream.util.StreamReaderDelegate"/>
 <%--
   Created by IntelliJ IDEA.
-  User: baiyuhong
-  Date: 2018/10/11
+  User: zhaoyingxin
+  Date: 2021/10/11
   Time: 17:31
   To change this template use File | Settings | File Templates.
 --%>

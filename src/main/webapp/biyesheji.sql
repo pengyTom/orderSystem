@@ -5,14 +5,18 @@
  Source Server Type    : MySQL
  Source Server Version : 50722
  Source Host           : localhost:3306
- Source Schema         : biyesheji
+ Source Schema         : order_drink
 
  Target Server Type    : MySQL
  Target Server Version : 50722
  File Encoding         : 65001
 
- Date: 05/12/2018 15:14:36
+ Date: 05/12/2021 15:14:36
 */
+
+create database order_drink;
+use order_drink;
+
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
@@ -77,10 +81,14 @@ CREATE TABLE `order_`  (
 -- ----------------------------
 -- Records of order_
 -- ----------------------------
-INSERT INTO `order_` VALUES (1, '201811021055177112826', '5a124', 2, 1);
-INSERT INTO `order_` VALUES (2, '201811021055179112826', '我是地址', 2, 1);
-INSERT INTO `order_` VALUES (18, '201811251731209717398', '姓名：byh,邮箱：1191741799@qq.com,配送地址：wodedizhi敖德萨,手机号：123456', 1, 1);
-INSERT INTO `order_` VALUES (19, '201811251750178958169', '姓名：byh,邮箱：1191741799@qq.com,配送地址：dsaddddddddddddddddddddddd,手机号：123456', 1, 1);
+INSERT INTO `order_`
+VALUES (1, '202111021055177112826', '5a124', 2, 1);
+INSERT INTO `order_`
+VALUES (2, '202111021055179112826', '我是地址', 2, 1);
+INSERT INTO `order_`
+VALUES (18, '202111251731209717398', '姓名：byh,邮箱：1191741799@qq.com,配送地址：wodedizhi敖德萨,手机号：123456', 1, 1);
+INSERT INTO `order_`
+VALUES (19, '202111251750178958169', '姓名：byh,邮箱：1191741799@qq.com,配送地址：dsaddddddddddddddddddddddd,手机号：123456', 1, 1);
 
 -- ----------------------------
 -- Table structure for orderitem
@@ -227,30 +235,39 @@ INSERT INTO `product` VALUES (31, '单煎牛排', 45.00, 98, 564, 1, 'images/pro
 -- ----------------------------
 DROP TABLE IF EXISTS `review`;
 CREATE TABLE `review`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '该用户默认给出了好评！！！' COMMENT '评论内容',
-  `cstid` int(11) DEFAULT NULL COMMENT '用户id',
-  `pid` int(11) DEFAULT NULL COMMENT '商品id',
-  `createtime` datetime(0) DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  INDEX `cstid`(`cstid`) USING BTREE,
-  INDEX `pid`(`pid`) USING BTREE,
-  CONSTRAINT `review_ibfk_1` FOREIGN KEY (`cstid`) REFERENCES `customer` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
-  CONSTRAINT `review_ibfk_2` FOREIGN KEY (`pid`) REFERENCES `product` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
+                         `id`         int(11) NOT NULL AUTO_INCREMENT,
+                         `content`    varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '该用户默认给出了好评！！！' COMMENT '评论内容',
+                         `cstid`      int(11)                                                 DEFAULT NULL COMMENT '用户id',
+                         `pid`        int(11)                                                 DEFAULT NULL COMMENT '商品id',
+                         `createtime` datetime                                                DEFAULT NULL,
+                         PRIMARY KEY (`id`) USING BTREE,
+                         INDEX `cstid` (`cstid`) USING BTREE,
+                         INDEX `pid` (`pid`) USING BTREE,
+                         CONSTRAINT `review_ibfk_1` FOREIGN KEY (`cstid`) REFERENCES `customer` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+                         CONSTRAINT `review_ibfk_2` FOREIGN KEY (`pid`) REFERENCES `product` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of review
 -- ----------------------------
-INSERT INTO `review` VALUES (3, '我是评论', 1, 4, '2018-11-04 10:52:37');
-INSERT INTO `review` VALUES (4, 'w is pl ', 1, 5, '2018-11-04 10:54:24');
-INSERT INTO `review` VALUES (6, 'aa', 1, 4, '2018-11-05 17:15:37');
-INSERT INTO `review` VALUES (7, '我是一条评论', 1, 4, '2018-11-05 17:50:33');
-INSERT INTO `review` VALUES (8, 'kl0', 1, 4, '2018-11-13 20:38:35');
-INSERT INTO `review` VALUES (9, NULL, 1, 4, '2018-11-26 09:36:30');
-INSERT INTO `review` VALUES (10, 'pjia ', 1, 4, '2018-11-26 09:38:49');
-INSERT INTO `review` VALUES (11, '我是评价', 1, 2, '2018-11-26 09:41:12');
-INSERT INTO `review` VALUES (12, '测试评价', 1, 10, '2018-11-27 16:32:08');
+INSERT INTO `review`
+VALUES (3, '我是评论', 1, 4, '2021-11-04 10:52:37');
+INSERT INTO `review`
+VALUES (4, 'w is pl ', 1, 5, '2021-11-04 10:54:24');
+INSERT INTO `review`
+VALUES (6, 'aa', 1, 4, '2021-11-05 17:15:37');
+INSERT INTO `review`
+VALUES (7, '我是一条评论', 1, 4, '2021-11-05 17:50:33');
+INSERT INTO `review`
+VALUES (8, 'kl0', 1, 4, '2021-11-13 20:38:35');
+INSERT INTO `review`
+VALUES (9, NULL, 1, 4, '2021-11-26 09:36:30');
+INSERT INTO `review`
+VALUES (10, 'pjia ', 1, 4, '2021-11-26 09:38:49');
+INSERT INTO `review`
+VALUES (11, '我是评价', 1, 2, '2021-11-26 09:41:12');
+INSERT INTO `review`
+VALUES (12, '测试评价', 1, 10, '2021-11-27 16:32:08');
 
 -- ----------------------------
 -- Table structure for role
@@ -351,26 +368,38 @@ INSERT INTO `role_permission` VALUES (398, 2, 2);
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user`  (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '管理员姓名',
-  `password` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '管理员密码',
-  `salt` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `status` int(10) DEFAULT NULL COMMENT '状态，1：启用，0：停用',
-  `address` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '暂无' COMMENT '商家管理员地址',
-  `phone` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `lasttime` datetime(0) DEFAULT NULL COMMENT '最后登陆时间',
-  PRIMARY KEY (`id`) USING BTREE
+                       `id`       bigint(20) NOT NULL AUTO_INCREMENT,
+                       `name`     varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '管理员姓名',
+                       `password` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '管理员密码',
+                       `salt`     varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+                       `status`   int(10)                                                 DEFAULT NULL COMMENT '状态，1：启用，0：停用',
+                       `address`  varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '暂无' COMMENT '商家管理员地址',
+                       `phone`    varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci  DEFAULT NULL,
+                       `lasttime` datetime                                                DEFAULT NULL COMMENT '最后登陆时间',
+                       PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 32 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (1, '小白', 'bd4b9f244abc416c9eb798c5eccdf911', 'YI7h6q+GgynkQyK2pZiPcQ==', 1, '暂无', '12445242532', '2018-12-05 11:53:15');
-INSERT INTO `user` VALUES (15, 'visitor', '6367dbed6a55839758cfb67771973841', 'CKebgOQhmZkLrBYXtBOLbQ==', 1, '暂无', '12456458532', '2018-11-05 11:29:41');
-INSERT INTO `user` VALUES (28, '避风港', '552b3a7761fc3a9d1f0db4472ab30d51', '2i/lq3CinJJBGKWc7oU/JQ==', 1, '龙马潭区', '18224235623', '2018-11-05 11:25:22');
-INSERT INTO `user` VALUES (29, '小熊早餐店', '8612e72664be9722e41a81ac0aaa0fd6', 'mHnsr5dIoQKC2DQzvHRrRg==', 1, '商贸城', '12453265428', '2018-11-01 09:17:27');
-INSERT INTO `user` VALUES (30, '美味私厨', 'a469aeda72843f96fc68bc6d63c3dcca', '4PM6lket6jMAYk3/wHLF/Q==', 1, '龙马潭区', '15684569753', '2018-11-01 09:17:27');
-INSERT INTO `user` VALUES (31, '川西食府', '711fc51f8cc005bcf255805f91390e0b', '6h4fM4l6AnPKZiLQHwxZQA==', 1, '江阳区', '12452253264', '2018-11-01 09:17:27');
+INSERT INTO `user`
+VALUES (1, '小白', 'bd4b9f244abc416c9eb798c5eccdf911', 'YI7h6q+GgynkQyK2pZiPcQ==', 1, '暂无', '12445242532',
+        '2021-12-05 11:53:15');
+INSERT INTO `user`
+VALUES (15, 'visitor', '6367dbed6a55839758cfb67771973841', 'CKebgOQhmZkLrBYXtBOLbQ==', 1, '暂无', '12456458532',
+        '2021-11-05 11:29:41');
+INSERT INTO `user`
+VALUES (28, '避风港', '552b3a7761fc3a9d1f0db4472ab30d51', '2i/lq3CinJJBGKWc7oU/JQ==', 1, '龙马潭区', '18224235623',
+        '2021-11-05 11:25:22');
+INSERT INTO `user`
+VALUES (29, '小熊早餐店', '8612e72664be9722e41a81ac0aaa0fd6', 'mHnsr5dIoQKC2DQzvHRrRg==', 1, '商贸城', '12453265428',
+        '2021-11-01 09:17:27');
+INSERT INTO `user`
+VALUES (30, '美味私厨', 'a469aeda72843f96fc68bc6d63c3dcca', '4PM6lket6jMAYk3/wHLF/Q==', 1, '龙马潭区', '15684569753',
+        '2021-11-01 09:17:27');
+INSERT INTO `user`
+VALUES (31, '川西食府', '711fc51f8cc005bcf255805f91390e0b', '6h4fM4l6AnPKZiLQHwxZQA==', 1, '江阳区', '12452253264',
+        '2021-11-01 09:17:27');
 
 -- ----------------------------
 -- Table structure for user_role
@@ -398,21 +427,26 @@ INSERT INTO `user_role` VALUES (95, 15, 3);
 -- ----------------------------
 DROP TABLE IF EXISTS `zixun`;
 CREATE TABLE `zixun`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `content` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '资讯内容',
-  `cstid` int(11) DEFAULT NULL COMMENT '客户id',
-  `status` int(255) DEFAULT 0 COMMENT '审核状态，1：通过，0：未通过;',
-  `fabudate` datetime(0) DEFAULT NULL COMMENT '发布时间;',
-  PRIMARY KEY (`id`) USING BTREE
+                        `id`       int(11) NOT NULL AUTO_INCREMENT,
+                        `content`  varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '资讯内容',
+                        `cstid`    int(11)                                                  DEFAULT NULL COMMENT '客户id',
+                        `status`   int(255)                                                 DEFAULT 0 COMMENT '审核状态，1：通过，0：未通过;',
+                        `fabudate` datetime                                                 DEFAULT NULL COMMENT '发布时间;',
+                        PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of zixun
 -- ----------------------------
-INSERT INTO `zixun` VALUES (1, '我是第一条资讯', 1, 1, '2018-11-05 14:53:29');
-INSERT INTO `zixun` VALUES (2, '我是第二个', 1, 1, '2018-11-05 18:05:42');
-INSERT INTO `zixun` VALUES (3, 'aaaa', 1, 1, '2018-11-06 15:06:38');
-INSERT INTO `zixun` VALUES (4, '我是一条没审核的资讯', 1, 0, '2018-11-06 15:20:07');
-INSERT INTO `zixun` VALUES (6, '我想发布一条资讯', 1, 1, '2018-11-26 11:19:57');
+INSERT INTO `zixun`
+VALUES (1, '我是第一条资讯', 1, 1, '2021-11-05 14:53:29');
+INSERT INTO `zixun`
+VALUES (2, '我是第二个', 1, 1, '2021-11-05 18:05:42');
+INSERT INTO `zixun`
+VALUES (3, 'aaaa', 1, 1, '2021-11-06 15:06:38');
+INSERT INTO `zixun`
+VALUES (4, '我是一条没审核的资讯', 1, 0, '2021-11-06 15:20:07');
+INSERT INTO `zixun`
+VALUES (6, '我想发布一条资讯', 1, 1, '2021-11-26 11:19:57');
 
 SET FOREIGN_KEY_CHECKS = 1;
