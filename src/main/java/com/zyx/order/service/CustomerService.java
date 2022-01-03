@@ -9,13 +9,13 @@ public interface CustomerService extends CrudService<Customer>{
      * @param customer
      * @return
      */
-    public Customer foreLogin(Customer customer);
+    Customer foreLogin(Customer customer);
 
     /**
      * 设置会员
      * @param id
      */
-    public void shezhihuiyuan(int id);
+    void shezhihuiyuan(int id);
 
 
 

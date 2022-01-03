@@ -13,50 +13,50 @@ public interface RoleService {
      * @param userName
      * @return
      */
-    public Set<String> listRoleNames(String userName);
+    Set<String> listRoleNames(String userName);
 
     /**
      * 当前管理员拥有的角色
      * @param userName
      * @return
      */
-    public List<Role> listRoles(String userName);
+    List<Role> listRoles(String userName);
 
     /**
      * 当前管理员的所有角色实体列表
      * @param user
      * @return
      */
-    public List<Role> listRoles(User user);
+    List<Role> listRoles(User user);
 
     /**
      * 数据库所有的角色
      * @return
      */
-    public List<Role> list();
+    List<Role> list();
 
     /**
      * 添加角色
      * @param role
      */
-    public void add(Role role);
+    void add(Role role);
 
     /**
      * 删除角色
      * @param id
      */
-    public void delete(Long id);
+    void delete(Long id);
 
     /**
      * 获得一条角色
      * @param id
      * @return
      */
-    public Role get(Long id);
+    Role get(Long id);
 
     /**
      * 更新角色
      * @param role
      */
-    public void update(Role role);
+    void update(Role role);
 }
