@@ -16,7 +16,7 @@
         <property name="securityManager" ref="securityManager"/>
         <!-- 配置登录请求地址 -->
         <property name="loginUrl" value="/login"/>
-        <!-- 如果您请求的资源不再您的权限范围，则跳转到/unauthorized -->
+        <!-- 如果请求的资源不再您的权限范围，则跳转到/unauthorized -->
         <property name="unauthorizedUrl" value="/unauthorized"/>
         <!-- 退出 url拦截 -->
         <property name="filters">
@@ -30,8 +30,8 @@
             <value>
                 <!-- anon表示此地址不需要任何权限即可访问 -->
                 /fore/**=anon
-                /islogout=logout
-                /login=anon
+                /islogout/**=logout
+                /login/**=anon
                 /static/**=anon
                 /css/**=anon
                 /js/**=anon

@@ -76,7 +76,7 @@
 
                         <div class="single-dropdown">
 
-                            <a href="/fore/foreIndex" id="changeLanguage"><span id="languageName">首页</span></a>
+                            <a href="${pageContext.request.contextPath}/fore/foreIndex" id="changeLanguage"><span id="languageName">首页</span></a>
 
                         </div>
 

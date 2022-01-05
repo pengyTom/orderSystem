@@ -13,7 +13,7 @@ import javax.servlet.ServletResponse;
 import java.util.Set;
 
 /**
- * 后台登陆状态权限拦截验证 没有登陆挑战login 没有权限跳转unauthorized
+ * 后台登陆状态权限拦截验证 没有登陆自动跳转login 没有权限跳转unauthorized等待授权
  */
 public class URLPathMatchingFilter extends PathMatchingFilter {
     @Resource
@@ -29,7 +29,7 @@ public class URLPathMatchingFilter extends PathMatchingFilter {
         Subject subject = SecurityUtils.getSubject();
         // 如果没有登录，就跳转到登录页面
         if (!subject.isAuthenticated()) {
-            WebUtils.issueRedirect(request, response, "/login");
+            WebUtils.issueRedirect(request, response, "/fore/foreIndex");
             return false;
         }
 
