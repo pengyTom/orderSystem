@@ -395,10 +395,10 @@
         $.get(
             "foreIsLogin",
             function (result) {
-                if (result == "true") { //首页立即购买默认只买一件
+                if (result === "true") {
                     var totalPrice = 1 * price;
                     location.href = "forebuyone?pid=" + id + "&number=1" + "&totalPrice=" + totalPrice;
-                } else {  //未登录
+                } else {
                     alert("请先登陆!")
                 }
             }
@@ -414,13 +414,13 @@
                 "foreAddCart",
                 {pid: this_pro_id, number: number, totalPrice: totalPrice},
                 function (data) {
-                    if (data == "success") {
+                    if (data === "success") {
                         alert("添加购物车成功");
                     } else {
                         alert("请先登陆！！！");
                     }
                 }
-            );//添加购物车结束
+            );
         });
     });
 </script>

@@ -21,6 +21,6 @@
     }
 </style>
 <div id="mydiv" class="checkout-title">
-    <div id="mycart">您已支付成功,共计${total}元<a href="/fore/forebought" style="color: red">查看订单》</a></div>
+    <div id="mycart">您已支付成功,共计${total}元<a href="${pageContext.request.contextPath}/fore/forebought" style="color: red">查看订单》</a></div>
 </div>
 <%@ include file="../../foreinclude/foreFooter.jsp" %>

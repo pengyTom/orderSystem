@@ -21,6 +21,6 @@
     }
 </style>
 <div id="mydiv" class="checkout-title">
-    <div id="mycart">注册成功，返回<a href="/fore/foreIndex" style="color: red">首页</a></div>
+    <div id="mycart">注册成功，返回<a href="${pageContext.request.contextPath}/fore/foreIndex" style="color: red">首页</a></div>
 </div>
 <%@ include file="../../foreinclude/foreFooter.jsp" %>

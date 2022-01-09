@@ -24,8 +24,7 @@ public class ForeServiceImpl implements ForeService {
         CategoryExample example = new CategoryExample();
         //从1开始计数
         example.createCriteria().andIdBetween(1, 4);
-        List<Category> categories = categoryMapper.selectByExample(example);
-        return categories;
+        return categoryMapper.selectByExample(example);
     }
 
     @Override

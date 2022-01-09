@@ -68,16 +68,10 @@
                 </div>
                 <div class="col-12 col-lg-6">
                     <!--=======  header top dropdowns  =======-->
-
                     <div class="header-top-dropdown d-flex justify-content-center justify-content-lg-end">
-
-
                         <!--=======  single dropdown  =======-->
-
                         <div class="single-dropdown">
-
                             <a href="${pageContext.request.contextPath}/fore/foreIndex" id="changeLanguage"><span id="languageName">首页</span></a>
-
                         </div>
 
                         <span class="separator pl-15 pr-15">|</span>
@@ -93,7 +87,7 @@
                             </div>
                             <span class="separator pl-15 pr-15">|</span>
                             <div class="single-dropdown">
-                                <a href="/fore/foreCstLoginOut"><span>退出</span></a>
+                                <a href="${pageContext.request.contextPath}/fore/foreCstLoginOut"><span>退出</span></a>
                             </div>
                         </c:if>
                         <c:if test="${cst==null}">
@@ -106,45 +100,30 @@
                             </div>
                         </c:if>
                         <!--=======  End of single dropdown  =======-->
-
-
                     </div>
-
-
                     <!--=======  End of header top dropdowns  =======-->
                 </div>
             </div>
         </div>
     </div>
 
-    <!--=====  End of header top  ======-->
-
-    <!--=============================================
-    =            navigation menu top            =
-    =============================================-->
-
-
     <div class="navigation-menu-top navigation-menu-top-home-4 pt-35 pb-35 pt-md-15 pb-md-15 pt-sm-15 pb-sm-15 mb-md-55 mb-sm-55">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-6 col-lg-2 col-md-6 col-sm-6 order-1 order-lg-1">
                     <!--=======  logo  =======-->
-
                     <div class="logo">
-                        <a href="/fore/foreIndex">
+                        <a href="${pageContext.request.contextPath}/fore/foreIndex">
                             <img src="${pageContext.request.contextPath}/assets/images/logo.png" class="img-fluid"
                                  alt="">
                         </a>
                     </div>
-
                     <!--=======  End of logo  =======-->
                 </div>
                 <div class="col-12 col-lg-8 col-md-12 col-sm-12 order-3 order-lg-2">
-                    <!--=======  header feature container  =======-->
-
+                    <!--======= header feature container  =======-->
                     <div class="header-feature-container mt-md-15 mt-sm-15">
                         <!--=======  single feature  =======-->
-
                         <div class="single-feature d-flex">
                             <div class="image">
                                 <i class="icon ion-md-globe"></i>
@@ -154,10 +133,8 @@
                                 <p>所有订单免运费</p>
                             </div>
                         </div>
-
                         <!--=======  End of single feature  =======-->
                         <!--=======  single feature  =======-->
-
                         <div class="single-feature d-flex">
                             <div class="image">
                                 <i class="icon ion-md-checkmark-circle-outline"></i>
@@ -167,10 +144,8 @@
                                 <p>下单5分钟内无条件取消</p>
                             </div>
                         </div>
-
                         <!--=======  End of single feature  =======-->
                         <!--=======  single feature  =======-->
-
                         <div class="single-feature d-flex mb-sm-0">
                             <div class="image">
                                 <i class="icon ion-md-notifications-outline"></i>
@@ -180,33 +155,24 @@
                                 <p>每个订单超过$ 120.00</p>
                             </div>
                         </div>
-
                         <!--=======  End of single feature  =======-->
-
-
                     </div>
-
                     <!--=======  End of header feature container  =======-->
-
-
                 </div>
                 <div class=" col-6 col-lg-2 col-md-6 col-sm-6 order-2 order-lg-3">
                     <!--=======  cart icon  =======-->
-
                     <div class="minicart-section minicart-section-home-4">
-                        <a href="/fore/forecart" id="cart-icon">
+                        <a href="${pageContext.request.contextPath}/fore/forecart" id="cart-icon">
                             <span class="image"><i class="icon ion-md-cart"></i></span>
                             <h5>我的购物车<i class="fa fa-angle-down"></i></h5>
                             <p>点击查看</p>
                         </a>
                     </div>
-
                     <!--=======  End of cart icon  =======-->
                 </div>
             </div>
         </div>
     </div>
-
     <!--=======  End of navigation menu top  =======-->
     <!--=============================================
 =            navigation menu         =
@@ -219,22 +185,18 @@
                     <!--=======  sticky logo  =======-->
 
                     <div class="sticky-logo">
-                        <a href="/fore/foreIndex">
+                        <a href="${pageContext.request.contextPath}/fore/foreIndex">
                             <img src="${pageContext.request.contextPath}/assets/images/logo.png" class="img-fluid"
                                  alt="">
                         </a>
                     </div>
-
                     <!--=======  End of sticky logo  =======-->
-
                     <!--=======  search icon for tablet  =======-->
-
                     <div class="search-icon-menutop-tablet search-icon-menutop-tablet-home-4 text-right d-inline-block d-lg-none">
                         <a href="#" id="search-overlay-active-button">
                             <i class="icon ion-md-search"></i>
                         </a>
                     </div>
-
                     <!--=======  End of search icon for tablet  =======-->
                     <!-- navigation section -->
                     <div class="main-menu">
@@ -248,9 +210,9 @@
                                         </c:forEach>
                                     </ul>
                                 </li>
-                                <li><a href="/fore/forebought">我的订单</a></li>
-                                <li><a href="/fore/foreZixuns">校园资讯</a></li>
-                                <li><a href="/fore/faq">常问问题</a></li>
+                                <li><a href="${pageContext.request.contextPath}/fore/forebought">我的订单</a></li>
+                                <li><a href="${pageContext.request.contextPath}/fore/foreZixuns">校园资讯</a></li>
+                                <li><a href="${pageContext.request.contextPath}/fore/faq">常问问题</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -258,14 +220,14 @@
                 </div>
                 <div class="col-12 col-lg-3">
                     <!--=======  navigation search bar  =======-->
-
                     <div class="navigation-search d-none d-lg-block">
-                        <form method="post" action="/fore/foreNameLike">
-                            <input type="search" placeholder="Search product ..." name="pName">
+                        <form method="post" action="${pageContext.request.contextPath}/fore/foreNameLike">
+                            <label>
+                                <input type="search" placeholder="Search product ..." name="pName">
+                            </label>
                             <button type="submit"><i class="icon ion-md-search"></i></button>
                         </form>
                     </div>
-
                     <!--=======  End of navigation search bar  =======-->
                 </div>
                 <div class="col-12 d-block d-lg-none">
@@ -275,9 +237,7 @@
             </div>
         </div>
     </div>
-
     <!--=====  End of navigation menu  ======-->
-
 </div>
 
 <!--=====  End of header container  ======-->

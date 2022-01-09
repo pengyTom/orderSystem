@@ -208,7 +208,7 @@
                     <!--=======  End of category menu =======-->
                     <!--=======  sticky logo  =======-->
                     <div class="sticky-logo" style="margin-top: -33px">
-                        <a href="/fore/foreIndex">
+                        <a href="${pageContext.request.contextPath}/fore/foreIndex">
                             <img src="${pageContext.request.contextPath}/assets/images/logo.png" class="img-fluid"
                                  alt="">
                         </a>
@@ -231,10 +231,10 @@
                     <div class="main-menu">
                         <nav>
                             <ul>
-                                <li><a href="/fore/forecart">我的购物车</a></li>
-                                <li><a href="/fore/forebought">我的订单</a></li>
-                                <li><a href="/fore/foreZixuns">校园资讯</a></li>
-                                <li><a href="/fore/faq">常问问题</a></li>
+                                <li><a href="${pageContext.request.contextPath}/fore/forecart">我的购物车</a></li>
+                                <li><a href="${pageContext.request.contextPath}/fore/forebought">我的订单</a></li>
+                                <li><a href="${pageContext.request.contextPath}/fore/foreZixuns">校园资讯</a></li>
+                                <li><a href="${pageContext.request.contextPath}/fore/faq">常问问题</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -244,7 +244,7 @@
                     <!--=======  navigation search bar  =======-->
 
                     <div class="navigation-search d-none d-lg-block">
-                        <form method="post" action="/fore/foreNameLike">
+                        <form method="post" action="${pageContext.request.contextPath}/fore/foreNameLike">
                             <input type="search" placeholder="Search product ..." name="pName" id="">
                             <button type="submit"><i class="icon ion-md-search"></i></button>
                         </form>

@@ -5,7 +5,7 @@
   Time: 17:22
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 
 <%@ include file="../../foreinclude/foreHander.jsp" %>
 
@@ -22,7 +22,7 @@
                 <div class="breadcrumb-container">
                     <nav>
                         <ul>
-                            <li class="parent-page"><a href="index.html">Home</a></li>
+                            <li class="parent-page"><a href="${pageContext.request.contextPath}/fore/foreIndexHome">Home</a></li>
                             <li>Register</li>
                         </ul>
                     </nav>
@@ -46,7 +46,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-3 col-xs-12"></div>
             <div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
-                <form action="/fore/foreRegister" method="post" class="loginForm">
+                <form action="${pageContext.request.contextPath}/fore/foreRegister" method="post" class="loginForm">
 
                     <div class="login-form">
                         <h4 class="login-title">Register</h4>
@@ -54,19 +54,23 @@
                         <div class="row">
                             <div class="col-md-6 col-12 mb-20">
                                 <label>姓名</label>
-                                <input class="mb-0" type="text" name="name" id="name" placeholder="Name">
+                                <label for="name"></label><input class="mb-0" type="text" name="name" id="name"
+                                                                 placeholder="Name">
                             </div>
                             <div class="col-md-6 col-12 mb-20">
-                                <label>pwd</label>
-                                <input class="mb-0" type="text" name="password" id="password" placeholder="">
+                                <label>密码</label>
+                                <label for="password"></label><input class="mb-0" type="text" name="password"
+                                                                     id="password" placeholder="">
                             </div>
                             <div class="col-md-12 mb-20">
                                 <label>地址:</label>
-                                <input class="mb-0" type="text" name="address" id="address" placeholder="Email Address">
+                                <label for="address"></label><input class="mb-0" type="text" name="address" id="address"
+                                                                    placeholder="Email Address">
                             </div>
                             <div class="col-md-6 mb-20">
                                 <label>手机:</label>
-                                <input class="mb-0" type="password" name="phone" id="phone" placeholder="Password">
+                                <label for="phone"></label><input class="mb-0" type="password" name="phone" id="phone"
+                                                                  placeholder="Password">
                             </div>
 
                             <div class="col-12">
@@ -81,16 +85,17 @@
     </div>
 </div>
 
-<!--===== End of Login Register page content ======-->
+<!--===== 元素选择器，表单提交后触发验证 ======-->
 <script src="${pageContext.request.contextPath}/js/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript">
     $(function () {
         //验证不能为空
         $("form.loginForm").submit(function () {
-            if (0 == $("#name").val().length || 0 == $("#password").val().length) {
-                alert("账号不能为空");
+            if (0 === $("#name").val().length || 0 === $("#password").val().length || 0 === $("#address").val().length) {
+                alert("账号或密码不能为空");
                 return false;
             }
+            //1.验证手机号是否存在?存在提示用户已注册，请登录跳转登录页面   不存在注册成功
             return true;
         });
     })

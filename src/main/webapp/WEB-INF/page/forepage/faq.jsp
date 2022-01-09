@@ -20,7 +20,7 @@
                 <div class="breadcrumb-container">
                     <nav>
                         <ul>
-                            <li class="parent-page"><a href="index.html">Home</a></li>
+                            <li class="parent-page"><a href="${pageContext.request.contextPath}/fore/foreIndexHome">Home</a></li>
                             <li>FAQ</li>
                         </ul>
                     </nav>

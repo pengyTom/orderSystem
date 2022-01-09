@@ -54,9 +54,9 @@ public class ForeController {
      */
     @RequestMapping("/foreIndex")
     public String index(Model model, HttpSession session) {
-
-        //传入3个分类
+        //生成目录数结构
         List<Category> categories = foreService.listToThree();
+        //获取列表
         List<Category> categories1 = categoryService.list();
         //给每个分类设置商品
         for (Category c : categories) {
@@ -76,6 +76,12 @@ public class ForeController {
         //保存在session  使其他页面也能获取到分类列表 而不用每次都去查询
         session.setAttribute("categories", categories1);
         return "forepage/index2";
+    }
+
+
+    @RequestMapping("/foreIndexHome")
+    public String indexHome(Model model, HttpSession session){
+        return "page/index";
     }
 
 
@@ -164,8 +170,8 @@ public class ForeController {
     /**
      * 注册
      *
-     * @param customer
-     * @return
+     * @param customer 注册用户
+     * @return 跳转注册成功界面
      */
     @RequestMapping("/foreRegister")
     public String register(Customer customer) {
@@ -177,9 +183,9 @@ public class ForeController {
     /**
      * 客户登陆
      *
-     * @param customer
-     * @param session
-     * @return
+     * @param customer 客户
+     * @param session  会话
+     * @return 返回结果
      */
     @RequestMapping("/foreLogin")
     public String foreLogin(Customer customer, HttpSession session, Model model) {
@@ -342,7 +348,6 @@ public class ForeController {
             oi.setPid(pid);
             orderItemService.save(oi);
         }
-
         return "success";
     }
 

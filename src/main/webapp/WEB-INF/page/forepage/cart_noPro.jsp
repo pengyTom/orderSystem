@@ -21,6 +21,6 @@
     }
 </style>
 <div id="mydiv" class="checkout-title">
-    <div id="mycart">购物车空空如也,<a href="/fore/foreIndex" style="color: red">去购物》</a></div>
+    <div id="mycart">购物车空空如也,<a href="${pageContext.request.contextPath}/fore/foreIndex" style="color: red">马上去购物》</a></div>
 </div>
 <%@ include file="../../foreinclude/foreFooter.jsp" %>

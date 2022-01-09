@@ -19,7 +19,7 @@
                 <div class="breadcrumb-container">
                     <nav>
                         <ul>
-                            <li class="parent-page"><a href="/fore/foreIndex">Home</a></li>
+                            <li class="parent-page"><a href="${pageContext.request.contextPath}/fore/foreIndex">Home</a></li>
                             <li>Cart</li>
                         </ul>
                     </nav>
@@ -237,7 +237,7 @@
 
     function removeByValue(arr, val) {
         for (var i = 0; i < arr.length; i++) {
-            if (arr[i] == val) {
+            if (arr[i] === val) {
                 arr.splice(i, 1);
                 break;
             }
@@ -246,7 +246,7 @@
 
     //提交购物车订单
     function subMyOrder() {
-        if (oiids.length == 0) {
+        if (oiids.length === 0) {
             alert("请勾选要买的商品");
             return false;
         }
@@ -258,7 +258,7 @@
             "foreDelOrderItem",
             {"oiid": oiid},
             function (result) {
-                if (result = "success") {
+                if (result === "success") {
                     $("#delOrderItem" + oiid).parent().remove();
                 } else {
                     alert("登陆过期，请登录");

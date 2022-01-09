@@ -11,7 +11,7 @@ public class CustomerExample {
     protected List<Criteria> oredCriteria;
 
     public CustomerExample() {
-        oredCriteria = new ArrayList<Criteria>();
+        oredCriteria = new ArrayList<>();
     }
 
     public void setOrderByClause(String orderByClause) {

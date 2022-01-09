@@ -23,7 +23,7 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/lib/html5.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/lib/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/h-ui/H-ui.min.css"/>
     <link rel="stylesheet" type="text/css"
           href="${pageContext.request.contextPath}/static/h-ui.admin/css/H-ui.admin.css"/>
     <link rel="stylesheet" type="text/css"
