@@ -127,7 +127,7 @@
                             <c:forEach items="${category.products}" var="product">
                                 <div class="fl-product">
                                     <div class="image">
-                                        <a href="foreDetailUI?id=${product.id}">
+                                        <a href="${pageContext.request.contextPath}/fore/foreDetailUI?id=${product.id}">
                                             <img src="${pageContext.request.contextPath}/${product.imageurl}"
                                                  class="img-fluid" alt="">
                                             <img src="${pageContext.request.contextPath}/${product.imageurl}"
@@ -140,7 +140,8 @@
                                     </div>
                                     <div class="content">
                                         <h2 class="product-title"><a
-                                                href="foreDetailUI?id=${product.id}">${product.name}</a></h2>
+                                                href="${pageContext.request.contextPath}/fore/foreDetailUI?id=${product.id}">${product.name}</a>
+                                        </h2>
                                         <div class="rating">
                                             <i class="fa fa-star active"></i>
                                             <i class="fa fa-star active"></i>

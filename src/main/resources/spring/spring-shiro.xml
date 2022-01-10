@@ -25,12 +25,12 @@
                 <entry key="url" value-ref="urlPathMatchingFilter"/>
             </util:map>
         </property>
-        <!-- 权限配置 -->
+        <!-- 权限配置-过滤器定义配置 -->
         <property name="filterChainDefinitions">
             <value>
                 <!-- anon表示此地址不需要任何权限即可访问 -->
                 /fore/**=anon
-                /islogout/**=logout
+                /isLogout/**=logout
                 /login/**=anon
                 /static/**=anon
                 /css/**=anon
@@ -85,7 +85,7 @@
     </bean>
     <!-- 安全管理器 -->
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
-        <!-- <property name="realm" ref="databaseRealm" />-->
+        <!--  <property name="realm" ref="databaseRealm" />-->
         <!-- 配置多个Realm -->
         <property name="realms">
             <list>

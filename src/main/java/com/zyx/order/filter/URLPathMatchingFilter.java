@@ -13,7 +13,7 @@ import javax.servlet.ServletResponse;
 import java.util.Set;
 
 /**
- * 后台登陆状态权限拦截验证 没有登陆自动跳转login 没有权限跳转unauthorized等待授权
+ * 登录拦截器，没有登录则自动跳转到主页，只有浏览权限，无其他权限
  */
 public class URLPathMatchingFilter extends PathMatchingFilter {
     @Resource
@@ -49,20 +49,15 @@ public class URLPathMatchingFilter extends PathMatchingFilter {
                     break;
                 }
             }
-
             if (hasPermission) {
                 return true;
             } else {
                 UnauthorizedException ex = new UnauthorizedException("当前用户没有访问路径 " + requestURI + " 的权限");
-
                 subject.getSession().setAttribute("ex", ex);
-
                 WebUtils.issueRedirect(request, response, "/unauthorized");
                 return false;
             }
-
         }
-
     }
 }
 

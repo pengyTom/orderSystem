@@ -20,11 +20,11 @@
 
     <!-- 配置 SqlSessionFactory -->
     <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <!-- 配置mapper全局配置文件的位置 -->
+        <!-- 配置mapper全局配置文件的位置,后面要增加实体的话在同一个包里面 -->
         <property name="configLocation" value="classpath:mybatis/mybatis.xml"/>
         <!-- 指定数据源 -->
         <property name="dataSource" ref="druidDataSource"/>
-        <!-- 指定mapper配置文件 -->
+        <!-- 指定mapper配置文件,正常情况下读取的配置文件xml文件 -->
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
         <!-- 配置mybatis分页插件PageHelper -->
         <property name="plugins">
@@ -37,15 +37,14 @@
                 </bean>
             </array>
         </property>
-
     </bean>
 
-    <!-- 配置扫描器，扫描所有的mapper接口 -->
+    <!-- 配置扫描器，扫描所有的mapper接口,批量注册mapper接口，注入spring里面进行托管 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.zyx.order.dao"/>
     </bean>
 
-    <!--事务管理-->
+    <!--事务管理，控制事务的一致性-->
     <tx:annotation-driven/>
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="druidDataSource"/>
