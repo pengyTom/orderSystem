@@ -118,7 +118,7 @@
                                                                         src="${pageContext.request.contextPath}/${oi.product.imageurl}"
                                                                         width="50px" height="50px"></li>
                                                                 <li class="col02"><a
-                                                                        href="foreDetailUI?id=${oi.product.id}">${oi.product.name},${oi.product.price}</a>
+                                                                        href="${pageContext.request.contextPath}/fore/foreDetailUI?id=${oi.product.id}">${oi.product.name},${oi.product.price}</a>
                                                                 </li>
                                                                 <li class="col03">${oi.number}</li>
                                                                 <li class="col04">$${oi.product.price*oi.number}</li>
@@ -131,7 +131,7 @@
                                                     <td width="15%">${order.total}元</td>
                                                     <td width="15%">
                                                         <div class="hover-icons">
-                                                            <a href="#" id="addressMsg"
+                                                            <a href="javascript:" id="addressMsg"
                                                                onclick="showAddressMsg('${order.address}');"
                                                                title="${order.address}">
                                                                 <img src="${pageContext.request.contextPath}/images/address.png"
@@ -213,7 +213,7 @@
                 "cstPinglun",
                 {"pid": pid, "content": content},
                 function (result) {
-                    if (result = "success") {
+                    if (result === "success") {
                         alert("评论成功")
                         $("#contents").val("");
                         $('#myModal').modal('hide');

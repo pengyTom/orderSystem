@@ -86,7 +86,7 @@
                         <!--=======  End of single dropdown  =======-->
                         <c:if test="${cst!=null}">
                             <div class="single-dropdown">
-                                <a href="#"><span>欢迎您，${cst.name}
+                                <a href="javascript:"><span>欢迎您，${cst.name}
                                      <c:if test="${cst.status==1}">(会员)</c:if>
                                      <c:if test="${cst.status==0}">(普通用户)</c:if>
                                     </span>
@@ -219,7 +219,7 @@
                     <!--=======  search icon for tablet  =======-->
 
                     <div class="search-icon-menutop-tablet text-right d-inline-block d-lg-none">
-                        <a href="#" id="search-overlay-active-button">
+                        <a href="javascript:" id="search-overlay-active-button">
                             <i class="icon ion-md-search"></i>
                         </a>
                     </div>

@@ -25,7 +25,8 @@
                                     <p>舌尖美食，一步到位</p>
                                     <h1>美味无法抵挡</h1>
                                     <p>现在下单满299元即可优惠30元,限时优惠.</p>
-                                    <a href="foreDetailUI?id=30" class="slider-btn">查看详情</a>
+                                    <a href="${pageContext.request.contextPath}/fore/foreDetailUI?id=30"
+                                       class="slider-btn">查看详情</a>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +50,8 @@
                                     <p>新客户享受八折优惠</p>
                                     <h1>巧克力蛋糕</h1>
                                     <p>chocolate cake 美食上新.</p>
-                                    <a href="foreDetailUI?id=13" class="slider-btn">查看详情</a>
+                                    <a href="${pageContext.request.contextPath}/fore/foreDetailUI?id=13"
+                                       class="slider-btn">查看详情</a>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +76,8 @@
                                     <p>周年庆牛排特惠</p>
                                     <h1>极致美食</h1>
                                     <p>新品享乐惠，品尝好滋味.</p>
-                                    <a href="foreDetailUI?id=31" class="slider-btn">查看详情</a>
+                                    <a href="${pageContext.request.contextPath}/fore/foreDetailUI?id=31"
+                                       class="slider-btn">查看详情</a>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +138,7 @@
                                         </a>
                                         <!-- wishlist icon -->
                                         <span class="wishlist-icon">
-												<a href="#"><i class="icon ion-md-heart-empty"></i></a>
+												<a href="javascript:"><i class="icon ion-md-heart-empty"></i></a>
 										 </span>
                                     </div>
                                     <div class="content">
@@ -162,11 +165,11 @@
 
                                         <div class="hover-icons">
                                             <ul>
-                                                <li><a href="#" data-tooltip="立即购买" id="nowPayment"
+                                                <li><a href="javascript:" data-tooltip="立即购买" id="nowPayment"
                                                        onclick="buyNow(${product.id},${product.price});"><i
                                                         class="icon ion-md-options"></i></a></li>
                                                 <li>
-                                                    <a href="#" data-toggle="modal"
+                                                    <a href="javascript:" data-toggle="modal"
                                                        data-target="#quick-view-modal-container" data-tooltip="添加到购物车"
                                                        onclick="Values('${product.id}','${product.name}','${product.price}','${product.imageurl}','${product.miaoshu}');">
                                                         <i class="icon ion-md-cart"></i>
@@ -205,7 +208,7 @@
                     <!--=======  single brand  =======-->
 
                     <div class="single-brand">
-                        <a href="#">
+                        <a href="javascript:">
                             <img src="${pageContext.request.contextPath}/assets/images/brands/01.png" class="img-fluid"
                                  alt="">
                         </a>
@@ -216,7 +219,7 @@
                     <!--=======  single brand  =======-->
 
                     <div class="single-brand">
-                        <a href="#">
+                        <a href="javascript:">
                             <img src="${pageContext.request.contextPath}/assets/images/brands/02.png" class="img-fluid"
                                  alt="">
                         </a>
@@ -227,7 +230,7 @@
                     <!--=======  single brand  =======-->
 
                     <div class="single-brand">
-                        <a href="#">
+                        <a href="javascript:">
                             <img src="${pageContext.request.contextPath}/assets/images/brands/03.png" class="img-fluid"
                                  alt="">
                         </a>
@@ -237,7 +240,7 @@
                     <!--=======  single brand  =======-->
 
                     <div class="single-brand">
-                        <a href="#">
+                        <a href="javascript:">
                             <img src="${pageContext.request.contextPath}/assets/images/brands/04.png" class="img-fluid"
                                  alt="">
                         </a>
@@ -247,7 +250,7 @@
                     <!--=======  single brand  =======-->
 
                     <div class="single-brand">
-                        <a href="#">
+                        <a href="javascript:">
                             <img src="${pageContext.request.contextPath}/assets/images/brands/01.png" class="img-fluid"
                                  alt="">
                         </a>
@@ -257,7 +260,7 @@
                     <!--=======  single brand  =======-->
 
                     <div class="single-brand">
-                        <a href="#">
+                        <a href="javascript:">
                             <img src="${pageContext.request.contextPath}/assets/images/brands/03.png" class="img-fluid"
                                  alt="">
                         </a>
@@ -267,7 +270,7 @@
                     <!--=======  single brand  =======-->
 
                     <div class="single-brand">
-                        <a href="#">
+                        <a href="javascript:">
                             <img src="${pageContext.request.contextPath}/assets/images/brands/02.png" class="img-fluid"
                                  alt="">
                         </a>
@@ -345,7 +348,8 @@
                                     <input type="text" value="1" id="nums">
                                 </div>
                                 <div class="add-to-cart-btn">
-                                    <a href="#" id="add_cart" class="fl-btn"><i class="fa fa-shopping-cart"></i> Add to
+                                    <a href="javascript:" id="add_cart" class="fl-btn"><i
+                                            class="fa fa-shopping-cart"></i> Add to
                                         Cart</a>
                                 </div>
                             </div>
@@ -354,10 +358,11 @@
                             <div class="social-share-buttons">
                                 <h3>分享</h3>
                                 <ul>
-                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li><a class="twitter" href="javascript:"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="facebook" href="javascript:"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="google-plus" href="javascript:"><i class="fa fa-google-plus"></i></a>
+                                    </li>
+                                    <li><a class="pinterest" href="javascript:"><i class="fa fa-pinterest"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -394,16 +399,16 @@
     function buyNow(id, price) {
         //ajax判断是否登陆
         $.get(
-            "foreIsLogin",
+            "${pageContext.request.contextPath}/fore/foreIsLogin",
             function (result) {
                 if (result === "true") {
                     var totalPrice = 1 * price;
-                    location.href = "forebuyone?pid=" + id + "&number=1" + "&totalPrice=" + totalPrice;
+                    location.href = "localhost:8080/fore/forebuyone?pid=" + id + "&number=1" + "&totalPrice=" + totalPrice;
                 } else {
                     alert("请先登陆!")
                 }
             }
-        );//登陆结束
+        );
     }
 
     $(document).ready(function () {
@@ -412,7 +417,7 @@
             var number = $("#nums").val();
             var totalPrice = number * this_pro_price;
             $.get(
-                "foreAddCart",
+                "${pageContext.request.contextPath}/fore/foreAddCart",
                 {pid: this_pro_id, number: number, totalPrice: totalPrice},
                 function (data) {
                     if (data === "success") {

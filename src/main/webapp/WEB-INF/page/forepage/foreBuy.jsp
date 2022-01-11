@@ -20,7 +20,8 @@
                 <div class="breadcrumb-container">
                     <nav>
                         <ul>
-                            <li class="parent-page"><a href="${pageContext.request.contextPath}/fore/foreIndex">Home</a></li>
+                            <li class="parent-page"><a href="${pageContext.request.contextPath}/fore/foreIndex">Home</a>
+                            </li>
                             <li>buy</li>
                         </ul>
                     </nav>
@@ -228,7 +229,7 @@
                                                     </div>
 
                                                     <button class="place-order">
-                                                        <a href="javascript:;" id="order_btn" onclick="createOrder();">提交订单</a>
+                                                        <a href="javascript:" id="order_btn" onclick="createOrder();">提交订单</a>
                                                     </button>
 
                                                 </div>
@@ -255,7 +256,7 @@
     var readed = false;//是否点击我已阅读
     var payedFun = false; //是否选中支付方式
     function yuedu(object) {
-        if (object.checked == 1) {
+        if (object.checked === 1) {
             readed = true;
         } else {
             readed = false;
@@ -263,7 +264,7 @@
     }
 
     function payedFunc(object) {
-        if (object.checked == 1) {
+        if (object.checked === 1) {
             payedFun = true;
         } else {
             payedFun = false;
@@ -275,7 +276,7 @@
         var email = $("#email").val();
         var address = $("#address").val();
         var phone = $("#phone").val();
-        if (name == "" || email == "" || address == "" || phone == "") {
+        if (name === "" || email === "" || address === "" || phone === "") {
             alert("收货信息不能为空！");
             return;
         }
@@ -289,7 +290,7 @@
         }
 
         var cstAddress = "姓名：" + name + ",邮箱：" + email + ",配送地址：" + address + ",手机号：" + phone;
-        window.location.href = "foreCreateOrder?address=" + cstAddress;
+        window.location.href = "http://localhost:8080/fore/foreCreateOrder?address=" + cstAddress;
     }
 
     //鼠标移入事件

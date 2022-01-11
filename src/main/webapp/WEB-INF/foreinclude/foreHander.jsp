@@ -79,7 +79,7 @@
                         <!--=======  End of single dropdown  =======-->
                         <c:if test="${cst!=null}">
                             <div class="single-dropdown">
-                                <a href="#"><span>欢迎您，${cst.name}
+                                <a href="javascript:"><span>欢迎您，${cst.name}
                                      <c:if test="${cst.status==1}">(会员)</c:if>
                                      <c:if test="${cst.status==0}">(普通用户)</c:if>
                                     </span>
@@ -193,7 +193,7 @@
                     <!--=======  End of sticky logo  =======-->
                     <!--=======  search icon for tablet  =======-->
                     <div class="search-icon-menutop-tablet search-icon-menutop-tablet-home-4 text-right d-inline-block d-lg-none">
-                        <a href="#" id="search-overlay-active-button">
+                        <a href="javascript:" id="search-overlay-active-button">
                             <i class="icon ion-md-search"></i>
                         </a>
                     </div>
@@ -202,7 +202,7 @@
                     <div class="main-menu">
                         <nav>
                             <ul>
-                                <li class="active menu-item-has-children"><a href="#">美食分类</a>
+                                <li class="active menu-item-has-children"><a href="javascript:">美食分类</a>
                                     <ul class="sub-menu">
                                         <c:forEach items="${categories}" var="category">
                                             <li><a href="foreFindCategory?id=${category.id}"

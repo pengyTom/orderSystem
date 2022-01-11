@@ -250,7 +250,7 @@
             alert("请勾选要买的商品");
             return false;
         }
-        window.location.href = "/fore/forebuy?oiid=" + oiids;
+        window.location.href = "http://localhost:8080/fore/forebuy?oiid=" + oiids;
     }
 
     function delOrderItem(oiid) {

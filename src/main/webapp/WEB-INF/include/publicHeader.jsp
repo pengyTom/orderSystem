@@ -27,7 +27,7 @@
                             商家管理员
                         </c:if>
                     </li>
-                    <li class="dropDown dropDown_hover"><a href="#" class="dropDown_A">你好，${subject.principal} <i
+                    <li class="dropDown dropDown_hover"><a href="javascript:" class="dropDown_A">你好，${subject.principal} <i
                             class="Hui-iconfont">&#xe6d5;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
                             <li><a href="${pageContext.request.contextPath}/islogout">退出</a></li>

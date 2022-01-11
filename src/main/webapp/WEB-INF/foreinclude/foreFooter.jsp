@@ -37,11 +37,11 @@
 
                         <div class="social-links">
                             <ul>
-                                <li><a href="#" class="twitter"  data-tooltip="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="facebook"  data-tooltip="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="behance" data-tooltip="Behance"><i class="fa fa-behance"></i></a></li>
-                                <li><a href="#" class="pinterest" data-tooltip="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-                                <li><a href="#" class="rss" data-tooltip="RSS"><i class="fa fa-rss"></i></a></li>
+                                <li><a href="javascript:" class="twitter"  data-tooltip="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="javascript:" class="facebook"  data-tooltip="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="javascript:" class="behance" data-tooltip="Behance"><i class="fa fa-behance"></i></a></li>
+                                <li><a href="javascript:" class="pinterest" data-tooltip="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="javascript:" class="rss" data-tooltip="RSS"><i class="fa fa-rss"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -54,11 +54,11 @@
                     <div class="widget-block">
                         <h4 class="footer-widget-title mb-sm-10">信息</h4>
                         <ul>
-                            <li><a href="#">关于我们</a></li>
-                            <li><a href="#">联系我们</a></li>
-                            <li><a href="#">服务</a></li>
-                            <li><a href="#">校园资讯</a></li>
-                            <li><a href="#">平台优惠</a></li>
+                            <li><a href="javascript:">关于我们</a></li>
+                            <li><a href="javascript:">联系我们</a></li>
+                            <li><a href="javascript:">服务</a></li>
+                            <li><a href="javascript:">校园资讯</a></li>
+                            <li><a href="javascript:">平台优惠</a></li>
                             <li><a href="#l">美食推荐</a></li>
                         </ul>
                     </div>
@@ -71,10 +71,10 @@
                     <div class="widget-block">
                         <h4 class="footer-widget-title mt-sm-20 mb-sm-10">商家指南</h4>
                         <ul>
-                            <li><a href="#">卖家中心</a></li>
-                            <li><a href="#">物流服务</a></li>
-                            <li><a href="#">交易规则</a></li>
-                            <li><a href="#">在线帮助</a></li>
+                            <li><a href="javascript:">卖家中心</a></li>
+                            <li><a href="javascript:">物流服务</a></li>
+                            <li><a href="javascript:">交易规则</a></li>
+                            <li><a href="javascript:">在线帮助</a></li>
 
                         </ul>
                     </div>
@@ -126,7 +126,7 @@
                     <!--=======  footer copyright text  =======-->
 
                     <div class="footer-copyright-text">
-                        <p>Copyright &copy; 2022 <a href="#">赵迎新</a></p>
+                        <p>Copyright &copy; 2022 <a href="javascript:">赵迎新</a></p>
                     </div>
 
                     <!--=======  End of footer copyright text  =======-->
@@ -154,7 +154,7 @@
 =============================================-->
 
 <div class="search-overlay" id="search-overlay">
-    <a href="#" class="search-overlay-close" id="search-overlay-close"><i class="fa fa-times"></i></a>
+    <a href="javascript:" class="search-overlay-close" id="search-overlay-close"><i class="fa fa-times"></i></a>
     <div class="search-box">
         <label>
             <input type="search" placeholder="Search entire store here">
@@ -166,7 +166,7 @@
 <!--=====  End of search overlay  ======-->
 
 <!-- scroll to top  -->
-<a href="#" class="scroll-top"></a>
+<a href="javascript:" class="scroll-top"></a>
 <!-- end of scroll to top -->
 
 <!-- JS

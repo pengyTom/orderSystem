@@ -80,7 +80,7 @@ public class ForeController {
 
 
     @RequestMapping("/foreIndexHome")
-    public String indexHome(Model model, HttpSession session){
+    public String indexHome(Model model, HttpSession session) {
         return "page/index";
     }
 
@@ -423,7 +423,7 @@ public class ForeController {
         List<OrderItem> ois = (List<OrderItem>) session.getAttribute("ois");
         //给每个订单项设置订单id  并且算出订单总价
         float total = orderService.add(order, ois);
-        return "redirect:forePayed?oid=" + order.getId() + "&total=" + total;
+        return "redirect:/fore/forePayed?oid=" + order.getId() + "&total=" + total;
     }
 
     /**

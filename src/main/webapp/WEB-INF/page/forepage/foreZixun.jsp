@@ -22,7 +22,8 @@
                 <div class="breadcrumb-container">
                     <nav>
                         <ul>
-                            <li class="parent-page"><a href="${pageContext.request.contextPath}/fore/foreIndexHome">Home</a></li>
+                            <li class="parent-page"><a
+                                    href="${pageContext.request.contextPath}/fore/foreIndexHome">Home</a></li>
                             <li>information</li>
                         </ul>
                     </nav>
@@ -90,10 +91,11 @@
                         <c:forEach items="${list}" var="z">
                             <div class="single-comment">
                                 <!--
-                                    <span class="reply-btn"><a href="#">Reply</a></span>
+                                    <span class="reply-btn"><a href="javascript:">Reply</a></span>
                                 -->
                                 <div class="image">
-                                    <img src="assets/images/blog-image/comment-icon.png" alt="">
+                                    <img src="${pageContext.request.contextPath}/assets/images/blog-image/comment-icon.png"
+                                         alt="">
                                 </div>
                                 <div class="content">
                                     <h3 class="user">${z.customer.name} <span class="comment-time"><fmt:formatDate
@@ -167,7 +169,7 @@
                 "foreZixunadd",
                 {"content": content},
                 function (result) {
-                    if (result == "success") {
+                    if (result === "success") {
                         alert("已提交，请等待管理员审核！");
                         $('#myModal').modal('hide');
                     }

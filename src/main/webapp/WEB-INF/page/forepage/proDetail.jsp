@@ -22,7 +22,7 @@
                     <nav>
                         <ul>
                             <li class="parent-page"><a href="${pageContext.request.contextPath}/fore/foreIndex">Home</a></li>
-                            <li class="parent-page"><a href="#">商品</a></li>
+                            <li class="parent-page"><a href="javascript:">商品</a></li>
                             <li>详细信息</li>
                         </ul>
                     </nav>
@@ -117,7 +117,7 @@
                     </div>
 
                     <p class="d-inline-block ml-10 review-link">
-                        <a href="#">
+                        <a href="javascript:">
                             <c:if test="${rs==null}">(0 customer review)</c:if>
                             <c:if test="${rs!=null}">(${rs} customer review)</c:if>
                         </a>
@@ -139,7 +139,7 @@
                             <input type="text" value="1" id="num">
                         </div>
                         <div class="add-to-cart-btn d-block">
-                            <a href="#" class="fl-btn" id="add_cart"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
+                            <a href="javascript:" class="fl-btn" id="add_cart"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
                         </div>
                     </div>
 
@@ -157,10 +157,10 @@
                     <div class="social-share-buttons">
                         <h3>分享该商品</h3>
                         <ul>
-                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a class="twitter" href="javascript:"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="facebook" href="javascript:"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="google-plus" href="javascript:"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a class="pinterest" href="javascript:"><i class="fa fa-pinterest"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -376,7 +376,7 @@
                                 </a>
                                 <!-- wishlist icon -->
                                 <span class="wishlist-icon">
-                                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
+                                        <a href="javascript:"><i class="icon ion-md-heart-empty"></i></a>
                                 </span>
                             </div>
                             <div class="content">
