@@ -99,11 +99,11 @@
                         </c:if>
                         <c:if test="${cst==null}">
                             <div class="single-dropdown">
-                                <a href="foreLoginUI"><span>登陆</span></a>
+                                <a href="${pageContext.request.contextPath}/fore/foreLoginUI"><span>登陆</span></a>
                             </div>
                             <span class="separator pl-15 pr-15">|</span>
                             <div class="single-dropdown">
-                                <a href="foreRegisterUI"><span>注册</span></a>
+                                <a href="${pageContext.request.contextPath}/fore/foreRegisterUI"><span>注册</span></a>
                             </div>
                         </c:if>
                         <!--=======  End of single dropdown  =======-->
@@ -125,7 +125,7 @@
                 <div class="col-6 col-lg-2 col-md-6 col-sm-6 order-1 order-lg-1">
                     <!--=======  logo  =======-->
                     <div class="logo">
-                        <a href="/fore/foreIndex">
+                        <a href="${pageContext.request.contextPath}/fore/foreIndex">
                             <img src="${pageContext.request.contextPath}/assets/images/logo.png" class="img-fluid"
                                  alt="">
                         </a>
@@ -200,7 +200,7 @@
                         <nav class="category-menu">
                             <ul>
                                 <c:forEach items="${categories}" var="category">
-                                    <li><a href="foreFindCategory?id=${category.id}">${category.name}</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/fore/foreFindCategory?id=${category.id}">${category.name}</a></li>
                                 </c:forEach>
                             </ul>
                         </nav>
@@ -245,7 +245,7 @@
 
                     <div class="navigation-search d-none d-lg-block">
                         <form method="post" action="${pageContext.request.contextPath}/fore/foreNameLike">
-                            <input type="search" placeholder="Search product ..." name="pName" id="">
+                            <label for="searchProductByLike">搜索</label><input type="search" placeholder="商品搜索 ..." name="pName" id="searchProductByLike">
                             <button type="submit"><i class="icon ion-md-search"></i></button>
                         </form>
                     </div>

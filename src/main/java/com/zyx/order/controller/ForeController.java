@@ -472,10 +472,12 @@ public class ForeController {
      */
     @RequestMapping("/foreNameLike")
     public String foreNameLike(Model model, String pName, Page page) {
-        PageHelper.offsetPage(page.getStart(), page.getCount());//分页查询
+        //分页查询
+        PageHelper.offsetPage(page.getStart(), page.getCount());
         if (pName != null) PNAME = pName;
         List<Product> products = productService.findByName(PNAME);
-        int total = (int) new PageInfo<>(products).getTotal();//总条数
+        //总条数
+        int total = (int) new PageInfo<>(products).getTotal();
         page.setTotal(total);
 
         model.addAttribute("products", products);

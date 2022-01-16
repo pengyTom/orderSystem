@@ -71,7 +71,8 @@
                     <div class="header-top-dropdown d-flex justify-content-center justify-content-lg-end">
                         <!--=======  single dropdown  =======-->
                         <div class="single-dropdown">
-                            <a href="${pageContext.request.contextPath}/fore/foreIndex" id="changeLanguage"><span id="languageName">首页</span></a>
+                            <a href="${pageContext.request.contextPath}/fore/foreIndex" id="changeLanguage"><span
+                                    id="languageName">首页</span></a>
                         </div>
 
                         <span class="separator pl-15 pr-15">|</span>
@@ -92,11 +93,11 @@
                         </c:if>
                         <c:if test="${cst==null}">
                             <div class="single-dropdown">
-                                <a href="foreLoginUI"><span>登陆</span></a>
+                                <a href="${pageContext.request.contextPath}/fore/foreLoginUI"><span>登陆</span></a>
                             </div>
                             <span class="separator pl-15 pr-15">|</span>
                             <div class="single-dropdown">
-                                <a href="foreRegisterUI"><span>注册</span></a>
+                                <a href="${pageContext.request.contextPath}/fore/foreRegisterUI"><span>注册</span></a>
                             </div>
                         </c:if>
                         <!--=======  End of single dropdown  =======-->
@@ -205,7 +206,8 @@
                                 <li class="active menu-item-has-children"><a href="javascript:">美食分类</a>
                                     <ul class="sub-menu">
                                         <c:forEach items="${categories}" var="category">
-                                            <li><a href="foreFindCategory?id=${category.id}"
+                                            <li>
+                                                <a href="${pageContext.request.contextPath}/fore/foreFindCategory?id=${category.id}"
                                                    class="fruit">${category.name}</a></li>
                                         </c:forEach>
                                     </ul>

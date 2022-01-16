@@ -30,7 +30,7 @@
                     <li class="dropDown dropDown_hover"><a href="javascript:" class="dropDown_A">你好，${subject.principal} <i
                             class="Hui-iconfont">&#xe6d5;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
-                            <li><a href="${pageContext.request.contextPath}/islogout">退出</a></li>
+                            <li><a href="${pageContext.request.contextPath}/isLogout">退出</a></li>
                         </ul>
                     </li>
 

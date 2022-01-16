@@ -20,8 +20,9 @@
                 <div class="breadcrumb-container">
                     <nav>
                         <ul>
-                            <li class="parent-page"><a href="${pageContext.request.contextPath}/fore/foreIndex">Home</a></li>
-                            <li>Seach</li>
+                            <li class="parent-page"><a href="${pageContext.request.contextPath}/fore/foreIndex">Home</a>
+                            </li>
+                            <li><a href="${pageContext.request.contextPath}/fore/foreIndex">Search</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -52,7 +53,8 @@
                             <!--=======  view mode  =======-->
                             <div class="view-mode-icons mb-xs-10">
                                 <a href="javascript:" data-target="grid"><i class="icon ion-md-apps"></i></a>
-                                <a class="active" href="javascript:" data-target="list"><i class="icon ion-ios-list"></i></a>
+                                <a class="active" href="javascript:" data-target="list"><i
+                                        class="icon ion-ios-list"></i></a>
                             </div>
                             <!--=======  End of view mode  =======-->
 
@@ -95,7 +97,9 @@
                                     </span>
                                 </div>
                                 <div class="content">
-                                    <h2 class="product-title"><a href="${pageContext.request.contextPath}/fore/foreDetailUI?id=${p.id}">${p.name}</a></h2>
+                                    <h2 class="product-title"><a
+                                            href="${pageContext.request.contextPath}/fore/foreDetailUI?id=${p.id}">${p.name}</a>
+                                    </h2>
                                     <div class="rating">
                                         <i class="fa fa-star active"></i>
                                         <i class="fa fa-star active"></i>
@@ -127,7 +131,9 @@
                                     </a>
                                 </div>
                                 <div class="content" style="padding-top: 55px">
-                                    <h2 class="product-title"><a href="${pageContext.request.contextPath}/fore/foreDetailUI?id=${p.id}">${p.name}</a></h2>
+                                    <h2 class="product-title"><a
+                                            href="${pageContext.request.contextPath}/fore/foreDetailUI?id=${p.id}">${p.name}</a>
+                                    </h2>
                                     <div class="rating">
                                         <i class="fa fa-star active"></i>
                                         <i class="fa fa-star active"></i>
