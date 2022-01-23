@@ -21,15 +21,15 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @RequestMapping("/list")
-    public String list(Model model){
+    public String list(Model model) {
         List<Category> list = categoryService.list();
-        model.addAttribute("list",list);
-        model.addAttribute("size",list.size());
+        model.addAttribute("list", list);
+        model.addAttribute("size", list.size());
         return "productmodule/category-list";
     }
 
     @RequestMapping("/addCategory")
-    public String add(@RequestParam(value = "name")String name){
+    public String add(@RequestParam(value = "name") String name) {
         Category category = new Category();
         category.setName(name);
         categoryService.save(category);
@@ -37,20 +37,20 @@ public class CategoryController {
     }
 
     @RequestMapping("/delCategory")
-    public String del(@RequestParam(value = "id")int id){
+    public String del(@RequestParam(value = "id") int id) {
         categoryService.del(id);
         return "redirect:list";
     }
 
     @RequestMapping("/editCategory")
-    public String edit(@RequestParam(value = "id")int id,Model model){
+    public String edit(@RequestParam(value = "id") int id, Model model) {
         Category category = categoryService.get(id);
-        model.addAttribute("category",category);
+        model.addAttribute("category", category);
         return "productmodule/category-edit";
     }
 
     @RequestMapping("/updateCategory")
-    public String update(Category category,Model model){
+    public String update(Category category, Model model) {
         categoryService.update(category);
         return "redirect:list";
     }

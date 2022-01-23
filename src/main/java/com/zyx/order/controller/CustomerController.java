@@ -21,32 +21,39 @@ import java.util.List;
 public class CustomerController {
     @Resource
     private CustomerService customerService;
+
     @RequestMapping("/list")
-    public String list(Model model, Page page)
-    {
-        PageHelper.offsetPage(page.getStart(),page.getCount());//分页查询
-        List<Customer> list= customerService.list();
-        int total = (int) new PageInfo<>(list).getTotal();//总条数
+    public String list(Model model, Page page) {
+        PageHelper.offsetPage(page.getStart(), page.getCount());
+        List<Customer> list = customerService.list();
+        int total = (int) new PageInfo<>(list).getTotal();
         page.setTotal(total);
-        model.addAttribute("list",list);
-        model.addAttribute("totals",total);
+        model.addAttribute("list", list);
+        model.addAttribute("totals", total);
         return "cstpage/cst-list";
     }
+
     /**
      * 设置会员
-     * @param id
-     * @return
+     *
+     * @param id 用户Id
+     * @return 结果
      */
     @RequestMapping("/shezhihuiyuan")
     @ResponseBody
-    public String shezhihuiyuan(int id){
+    public String shezhihuiyuan(int id) {
         customerService.shezhihuiyuan(id);
         return "success";
     }
 
+    /**
+     * 删除会员
+     *
+     * @param id 会员Id
+     * @return 结果
+     */
     @RequestMapping("/del")
-    public String del(int id)
-    {
+    public String del(int id) {
         customerService.del(id);
         return "redirect:list";
     }

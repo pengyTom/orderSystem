@@ -33,8 +33,9 @@ public class URLPathMatchingFilter extends PathMatchingFilter {
             return false;
         }
 
+        //查看是否有这个url的权限维护 有true 无false
         // 看看这个路径权限里有没有维护，如果没有维护，一律放行(也可以改为一律不放行)
-        boolean needInterceptor = permissionService.needInterceptor(requestURI); //查看是否有这个url的权限维护 有true 无false
+        boolean needInterceptor = permissionService.needInterceptor(requestURI);
         if (!needInterceptor) {
             return true;
         } else {//有维护
