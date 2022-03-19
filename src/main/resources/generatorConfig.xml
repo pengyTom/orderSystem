@@ -30,17 +30,17 @@
           比如我这里连起来就是：D:\spring\shiroTest\src\main\java下的com.byh.shiro.pojo文件夹保存生成的pojo文件
           下面生成xml和mapper同理
         -->
-        <javaModelGenerator targetPackage="com.zyx.order.pojo" targetProject="E:\biyesheji\src\main\java">
+        <javaModelGenerator targetPackage="com.zyx.order.pojo" targetProject="E:\order\src\main\java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
         <!--生成xml映射文件存放位置-->
-        <sqlMapGenerator targetPackage="mapper" targetProject="E:\biyesheji\src\main\resources">
+        <sqlMapGenerator targetPackage="mapper" targetProject="E:\order\src\main\resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
         <!--生成mapper类存放位置-->
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.zyx.order.dao"
-                             targetProject="E:\biyesheji\src\main\java">
+                             targetProject="E:\order\src\main\java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 

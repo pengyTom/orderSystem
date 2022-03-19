@@ -52,7 +52,7 @@ public class LoginController {
                 Session session = subject.getSession();
                 session.setAttribute("subject", subject);
                 session.setAttribute("lastLoginTime", lastLoginTime);
-                return "redirect:index";
+                return "redirect:/index";
             } else {
                 model.addAttribute("error", "账号已被停用！");
                 return "/login";

@@ -1,17 +1,17 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="biyesheji:war exploded">
+  <artifact type="exploded-war" name="order:war exploded">
     <output-path>$PROJECT_DIR$/target/order_drink</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
-        <module>biyesheji</module>
+        <module>order</module>
         <packaging>war</packaging>
       </options>
     </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="biyesheji" />
+          <element id="module-output" name="order" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.2.4.RELEASE" />
@@ -56,7 +56,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/order_drink/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="biyesheji/web/Web" />
+      <element id="javaee-facet-resources" facet="order/web/Web" />
     </root>
   </artifact>
 </component>
