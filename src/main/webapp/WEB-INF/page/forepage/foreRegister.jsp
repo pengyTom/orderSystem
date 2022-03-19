@@ -22,7 +22,8 @@
                 <div class="breadcrumb-container">
                     <nav>
                         <ul>
-                            <li class="parent-page"><a href="${pageContext.request.contextPath}/fore/foreIndexHome">Home</a></li>
+                            <li class="parent-page"><a
+                                    href="${pageContext.request.contextPath}/fore/foreIndexHome">Home</a></li>
                             <li>Register</li>
                         </ul>
                     </nav>
@@ -53,24 +54,24 @@
 
                         <div class="row">
                             <div class="col-md-6 col-12 mb-20">
-                                <label>姓名</label>
+                                <label>账号</label>
                                 <label for="name"></label><input class="mb-0" type="text" name="name" id="name"
-                                                                 placeholder="Name">
+                                                                 placeholder="账号为英文+数字组合形式">
                             </div>
                             <div class="col-md-6 col-12 mb-20">
                                 <label>密码</label>
                                 <label for="password"></label><input class="mb-0" type="text" name="password"
-                                                                     id="password" placeholder="">
+                                                                     id="password" placeholder="请输入密码">
                             </div>
                             <div class="col-md-12 mb-20">
                                 <label>地址:</label>
                                 <label for="address"></label><input class="mb-0" type="text" name="address" id="address"
-                                                                    placeholder="Email Address">
+                                                                    placeholder="电子邮箱">
                             </div>
                             <div class="col-md-6 mb-20">
                                 <label>手机:</label>
                                 <label for="phone"></label><input class="mb-0" type="password" name="phone" id="phone"
-                                                                  placeholder="Password">
+                                                                  placeholder="联系方式">
                             </div>
 
                             <div class="col-12">
@@ -92,7 +93,7 @@
         //验证不能为空
         $("form.loginForm").submit(function () {
             if (0 === $("#name").val().length || 0 === $("#password").val().length || 0 === $("#address").val().length) {
-                alert("账号或密码不能为空");
+                alert("信息填写完整后在进行注册");
                 return false;
             }
             //1.验证手机号是否存在?存在提示用户已注册，请登录跳转登录页面   不存在注册成功
