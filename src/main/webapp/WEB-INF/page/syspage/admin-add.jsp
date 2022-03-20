@@ -23,7 +23,7 @@
             <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>初始密码：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <label for="password"></label><input type="password" class="input-text" autocomplete="off" value=""
-                                                     placeholder="密码" id="password"
+                                                     placeholder="初始密码" id="password"
                                                      name="password">
             </div>
         </div>
@@ -43,7 +43,7 @@
             <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>地址：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <label for="address"></label><input type="text" class="input-text" autocomplete="off" value=""
-                                                    placeholder="密码" id="address"
+                                                    placeholder="联系地址" id="address"
                                                     name="address">
             </div>
         </div>
@@ -51,7 +51,7 @@
             <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>联系方式：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <label for="phone"></label><input type="text" class="input-text" autocomplete="off" value=""
-                                                  placeholder="密码" id="phone"
+                                                  placeholder="联系方式" id="phone"
                                                   name="phone">
             </div>
         </div>

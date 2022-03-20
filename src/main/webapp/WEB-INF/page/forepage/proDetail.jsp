@@ -21,7 +21,8 @@
                 <div class="breadcrumb-container">
                     <nav>
                         <ul>
-                            <li class="parent-page"><a href="${pageContext.request.contextPath}/fore/foreIndex">Home</a></li>
+                            <li class="parent-page"><a href="${pageContext.request.contextPath}/fore/foreIndex">Home</a>
+                            </li>
                             <li class="parent-page"><a href="javascript:">商品</a></li>
                             <li>详细信息</li>
                         </ul>
@@ -139,18 +140,19 @@
                             <input type="text" value="1" id="num">
                         </div>
                         <div class="add-to-cart-btn d-block">
-                            <a href="javascript:" class="fl-btn" id="add_cart"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
+                            <a href="javascript:" class="fl-btn" id="add_cart"><i class="fa fa-shopping-cart"></i> Add
+                                to Cart</a>
                         </div>
                     </div>
 
                     <p class="wishlist-link mb-20 pb-15">
-                        <a href="javascript:;" id="nowPayment"> <i class="icon ion-md-options"></i> 立即购买</a>
+                        <a href="#" id="nowPayment"> <i class="icon ion-md-options"></i> 立即购买</a>
                     </p>
 
                     <div class="category-list-container mb-20">
                         <span>商家: </span>
                         <ul>
-                            <li><a href="shop-left-sidebar.html">${product.user.name}</a>,</li>
+                            <li><a href="#">${product.user.name}</a>,</li>
                         </ul>
                     </div>
 

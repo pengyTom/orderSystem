@@ -10,7 +10,6 @@ import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.annotation.Resource;
 import java.text.ParsePosition;
@@ -27,7 +26,7 @@ public class LoginController {
     @Resource
     UserService userService;
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login")
     public String login(Model model, String name, String password) {
         Subject subject = SecurityUtils.getSubject();
         UsernamePasswordToken token = new UsernamePasswordToken(name, password);
@@ -48,17 +47,18 @@ public class LoginController {
                 us.setLasttime(strtodate);
                 userService.update(us);
             }
+            assert us != null;
             if (us.getStatus() == 1) {
                 Session session = subject.getSession();
                 session.setAttribute("subject", subject);
                 session.setAttribute("lastLoginTime", lastLoginTime);
-                return "redirect:/index";
+                return "redirect:/back/index";
             } else {
                 model.addAttribute("error", "账号已被停用！");
                 return "/login";
             }
         } catch (AuthenticationException e) {
-            model.addAttribute("error", "验证失败！");
+            model.addAttribute("error", "还未进行登录，请登录！");
             return "/login";
         }
     }

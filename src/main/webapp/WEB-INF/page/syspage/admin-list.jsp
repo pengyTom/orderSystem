@@ -1,4 +1,3 @@
-<jsp:useBean id="sysUser" scope="request" type="javax.xml.stream.util.StreamReaderDelegate"/>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -33,7 +32,7 @@
             <table class="table table-border table-bordered table-bg" id="mytable">
                 <thead>
                 <tr>
-                    <th scope="col" colspan="10">台后管理员列表</th>
+                    <th scope="col" colspan="10">后台管理员列表</th>
                 </tr>
                 <tr class="text-c">
                     <th width="25"><input type="checkbox" name="" value=""></th>

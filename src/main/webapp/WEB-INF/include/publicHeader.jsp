@@ -1,4 +1,3 @@
-<jsp:useBean id="subject" scope="request" type="sun.net.httpserver.ExchangeImpl"/>
 <%--
   Created by IntelliJ IDEA.
   User: zhaoyingxin
@@ -11,9 +10,11 @@
 <header class="navbar-wrapper">
     <div class="navbar navbar-fixed-top">
         <div class="container-fluid cl">
-            <a class="logo navbar-logo f-l mr-10 hidden-xs" href="${pageContext.request.contextPath}/fore/foreIndex" target="_blank">前台首页</a>
+            <a class="logo navbar-logo f-l mr-10 hidden-xs" href="${pageContext.request.contextPath}/fore/foreIndex"
+               target="_blank">前台首页</a>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="logo navbar-logo f-l mr-10 hidden-xs" href="${pageContext.request.contextPath}/index">后台首页</a>
+            <a class="logo navbar-logo f-l mr-10 hidden-xs"
+               href="${pageContext.request.contextPath}/back/index">后台首页</a>
 
             <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:">&#xe667;</a>
 
@@ -21,21 +22,21 @@
                 <ul class="cl">
                     <li>
                         <c:if test="${subject.hasRole('admin')}">
-                            超级管理员
+                            <span style="color: #1b6d85;font-size: 15px">超级管理员</span>
                         </c:if>
                         <c:if test="${!subject.hasRole('admin')}">
-                            商家管理员
+                            <span style="color: #1a1a1a ;font-size: 15px">商家管理员</span>
                         </c:if>
+                        <a href="javascript:" class="dropdown"
+                           style="color: yellowgreen;font-size: 15px">${subject.principal}
+                            <i class="Hui-iconfont">&#xe6d5;></i>
+                        </a>
+                        <a href="${pageContext.request.contextPath}/back/isLogout" style="color: saddlebrown">退出
+                        </a>
                     </li>
-                    <li class="dropDown dropDown_hover"><a href="javascript:" class="dropDown_A">你好，${subject.principal} <i
-                            class="Hui-iconfont">&#xe6d5;</i></a>
-                        <ul class="dropDown-menu menu radius box-shadow">
-                            <li><a href="${pageContext.request.contextPath}/isLogout">退出</a></li>
-                        </ul>
-                    </li>
-
                     <li id="Hui-skin" class="dropDown right dropDown_hover"><a href="javascript:" class="dropDown_A"
                                                                                title="换肤"><i class="Hui-iconfont"
+                                                                                             class="c-green"
                                                                                              style="font-size:18px">&#xe62a;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
                             <li><a href="javascript:" data-val="default" title="默认（黑色）">默认（黑色）</a></li>

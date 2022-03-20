@@ -100,6 +100,11 @@
                                 <a href="${pageContext.request.contextPath}/fore/foreRegisterUI"><span>注册</span></a>
                             </div>
                         </c:if>
+                        <span class="separator pl-15 pr-15">|</span>
+                        <div class="single-dropdown">
+                            <a href="${pageContext.request.contextPath}/user/login"
+                               style="color: #985f0d"><span>管理后台</span></a>
+                        </div>
                         <!--=======  End of single dropdown  =======-->
                     </div>
                     <!--=======  End of header top dropdowns  =======-->

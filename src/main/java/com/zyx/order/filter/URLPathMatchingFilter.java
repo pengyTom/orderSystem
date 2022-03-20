@@ -38,7 +38,8 @@ public class URLPathMatchingFilter extends PathMatchingFilter {
         boolean needInterceptor = permissionService.needInterceptor(requestURI);
         if (!needInterceptor) {
             return true;
-        } else {//有维护
+        } else {
+            //有维护
             boolean hasPermission = false;
             String userName = subject.getPrincipal().toString();
             //查询当前用户名拥有的权限

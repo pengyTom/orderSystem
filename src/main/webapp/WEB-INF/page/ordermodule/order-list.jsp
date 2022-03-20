@@ -28,15 +28,15 @@
             <table class="table table-border table-bordered table-bg" id="mytable">
                 <thead>
                 <tr>
-                    <th scope="col" colspan="10">台后订单列表</th>
+                    <th scope="col" colspan="10">后台订单列表</th>
                 </tr>
                 <tr class="text-c">
-                    <th width="">ID</th>
-                    <th>地址</th>
-                    <th>买家</th>
-                    <th>总价</th>
-                    <th>状态</th>
-                    <th width="150">操作</th>
+                    <th style="text-align: center;background-color: #1b6d85">客户编码</th>
+                    <th style="text-align: center;background-color: #1b6d85">地址</th>
+                    <th style="text-align: center;background-color: #1b6d85">买家</th>
+                    <th style="text-align: center;background-color: #1b6d85">总价</th>
+                    <th style="text-align: center;background-color: #1b6d85">状态</th>
+                    <th style="text-align: center;background-color: #1b6d85;width: 150px">操作</th>
                 </tr>
                 </thead>
                 <tbody>

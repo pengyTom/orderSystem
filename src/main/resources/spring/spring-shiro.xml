@@ -22,7 +22,7 @@
         <property name="filters">
             <util:map>
                 <entry key="logout" value-ref="logoutFilter"/>
-               <!-- <entry key="url" value-ref="urlPathMatchingFilter"/>-->
+                <entry key="url" value-ref="urlPathMatchingFilter"/>
             </util:map>
         </property>
         <!-- 权限配置-过滤器定义配置 -->
@@ -30,6 +30,7 @@
             <value>
                 <!-- anon表示此地址不需要任何权限即可访问 -->
                 /fore/**=anon
+                /user/**=anon
                 /isLogout/**=logout
                 /login/**=anon
                 /static/**=anon

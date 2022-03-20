@@ -221,7 +221,7 @@
                                                         </div>
 
                                                         <div class="single-method">
-                                                            <input type="checkbox" id="accept_terms"
+                                                            <input type="checkbox" id="accept_terms" name="haveRead"
                                                                    onclick="yuedu(this)">
                                                             <label for="accept_terms">我已阅读并接受条款和条件</label>
                                                         </div>
@@ -253,20 +253,18 @@
 <!--===== End of Cart page content ======-->
 <script src="${pageContext.request.contextPath}/js/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript">
-    var readed = false;//是否点击我已阅读
-    var payedFun = false; //是否选中支付方式
-    function yuedu(object) {
-        if (object.checked === 1) {
-            readed = true;
-        } else {
+    var readed = true;//是否点击我已阅读
+    var payedFun = true; //是否选中支付方式
+    function yuedu() {
+        var name = $("#haveRead").val();
+        if (name !== 1) {
             readed = false;
         }
     }
 
-    function payedFunc(object) {
-        if (object.checked === 1) {
-            payedFun = true;
-        } else {
+    function payedFunc() {
+        var name = $("#payment-method").val();
+        if (name !== 1) {
             payedFun = false;
         }
     }
@@ -277,7 +275,7 @@
         var address = $("#address").val();
         var phone = $("#phone").val();
         if (name === "" || email === "" || address === "" || phone === "") {
-            alert("收货信息不能为空！");
+            alert("收获信息不完整！");
             return;
         }
         if (!readed) {

@@ -14,7 +14,7 @@
 
 
 <section class="Hui-article-box">
-    <nav class="breadcrumb"><i class="Hui-iconfont"></i> <a href="${pageContext.request.contextPath}/index"
+    <nav class="breadcrumb"><i class="Hui-iconfont"></i> <a href="${pageContext.request.contextPath}/back/index"
                                                              class="maincolor">首页</a>
         <span class="c-999 en">&gt;</span>
         <span class="c-666">我的桌面</span>

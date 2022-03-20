@@ -1,4 +1,3 @@
-<jsp:useBean id="product" scope="request" type="javax.xml.stream.util.StreamReaderDelegate"/>
 <%--
   Created by IntelliJ IDEA.
   User: zhaoyingxin

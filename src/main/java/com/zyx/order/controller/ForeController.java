@@ -18,6 +18,7 @@ import javax.servlet.http.HttpSession;
 import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -274,9 +275,9 @@ public class ForeController {
      * @param session
      * @return 返回订单项集合   |   返回所有订单项加起来的总价
      */
-    @RequestMapping("/forebuy")
+    @RequestMapping(value = "/forebuy")
     public String forebuy(Model model, String[] oiid, HttpSession session) {
-        System.out.println(oiid);
+        System.out.println(Arrays.toString(oiid));
 
         List<OrderItem> ois = new ArrayList<>();
 
@@ -418,7 +419,8 @@ public class ForeController {
         order.setCode(orderCode);
         order.setAddress(address);
         order.setCstid(customer.getId());
-        order.setStatus(0);//未支付
+        //未支付
+        order.setStatus(0);
 
         List<OrderItem> ois = (List<OrderItem>) session.getAttribute("ois");
         //给每个订单项设置订单id  并且算出订单总价
