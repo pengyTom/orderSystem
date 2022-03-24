@@ -22,7 +22,7 @@
                 <ul class="cl">
                     <li>
                         <c:if test="${subject.hasRole('admin')}">
-                            <span style="color: #1b6d85;font-size: 15px">超级管理员</span>
+                            <span style="color: #1b6d85;font-size: 1px">超级管理员</span>
                         </c:if>
                         <c:if test="${!subject.hasRole('admin')}">
                             <span style="color: #1a1a1a ;font-size: 15px">商家管理员</span>
